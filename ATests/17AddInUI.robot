@@ -18,7 +18,7 @@ ${ValidateMarc}         ValidateMarc
 *** Test Cases ***
 #17655:Add missing title using the UI
 
-#*** Comment ***
+*** Comment ***
 Change workflowconfig ValidateMarc instance to 0
     Stop SheetMusic Scheduler
     Set Workflow.config Action ON/OFF  OFF  ${ValidateMarc}
