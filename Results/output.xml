@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20180124 12:43:48.041" generator="Robot 3.0 (Python 2.7.13 on win32)">
+<suite source="C:\Development\Robot_scripts\Sheet_Music" id="s1" name="Sheet Music">
+<suite source="C:\Development\Robot_scripts\Sheet_Music\ATests" id="s1-s1" name="ATests">
+<suite source="C:\Development\Robot_scripts\Sheet_Music\ATests\17AddInUI.robot" id="s1-s1-s1" name="17AddInUI">
+<test id="s1-s1-s1-t1" name="Cleardown">
+<kw name="Cleardown workflow Mddb queues log files" library="Keywords">
+<msg timestamp="20180124 12:44:08.878" level="TRACE">Arguments: [  ]</msg>
+<kw name="Open Predefined APP Server Connection" library="Keywords">
+<msg timestamp="20180124 12:44:08.878" level="TRACE">Arguments: [  ]</msg>
+<kw name="Open Connection" library="SSHLibrary">
+<doc>Opens a new SSH connection to the given `host` and `port`.</doc>
+<arguments>
+<arg>${APP_SERVER_IP}</arg>
+</arguments>
+<msg timestamp="20180124 12:44:08.879" level="TRACE">Arguments: [ '192.168.245.55' ]</msg>
+<msg timestamp="20180124 12:44:08.879" level="TRACE">Return: 1</msg>
+<status status="PASS" endtime="20180124 12:44:08.879" starttime="20180124 12:44:08.879"></status>
+</kw>
+<kw name="Login" library="SSHLibrary">
+<doc>Logs into the SSH server with the given `username` and `password`.</doc>
+<arguments>
+<arg>@{SERVER_LOGIN}</arg>
+</arguments>
+<msg timestamp="20180124 12:44:08.880" level="TRACE">Arguments: [ 'Administrator' | 'Pa55word' ]</msg>
+<msg timestamp="20180124 12:44:08.880" level="INFO">Logging into '192.168.245.55:22' as 'Administrator'.</msg>
+<msg timestamp="20180124 12:44:13.720" level="DEBUG">Adding ssh-dss host key for 192.168.245.55: b521f4f2ab0a4362d73b2150ef89bc9b</msg>
+<msg timestamp="20180124 12:44:14.059" level="DEBUG">[chan 0] Max packet in: 32768 bytes</msg>
+<msg timestamp="20180124 12:44:14.716" level="INFO">Read output:</msg>
+<msg timestamp="20180124 12:44:14.716" level="TRACE">Return: ''</msg>
+<status status="PASS" endtime="20180124 12:44:14.716" starttime="20180124 12:44:08.880"></status>
+</kw>
+<kw name="Start Command" library="SSHLibrary">
+<doc>Starts execution of the `command` on the remote machine and returns immediately.</doc>
+<arguments>
+<arg>examplelibrary.py</arg>
+</arguments>
+<msg timestamp="20180124 12:44:14.718" level="TRACE">Arguments: [ 'examplelibrary.py' ]</msg>
+<msg timestamp="20180124 12:44:14.719" level="INFO">Starting command 'examplelibrary.py'.</msg>
+<msg timestamp="20180124 12:44:14.719" level="DEBUG">[chan 1] Max packet in: 32768 bytes</msg>
+<msg timestamp="20180124 12:44:14.799" level="TRACE">Return: None</msg>
+<status status="PASS" endtime="20180124 12:44:14.799" starttime="20180124 12:44:14.717"></status>
+</kw>
+<kw name="Import Library" library="BuiltIn">
+<doc>Imports a library with the given name and optional arguments.</doc>
+<arguments>
+<arg>Remote</arg>
+<arg>http://${APP_SERVER_IP}:8270</arg>
+<arg>WITH NAME</arg>
+<arg>${APP_SERVER_NAME}</arg>
+</arguments>
+<msg timestamp="20180124 12:44:14.801" level="TRACE">Arguments: [ 'Remote' | 'http://${APP_SERVER_IP}:8270' | 'WITH NAME' | '${APP_SERVER_NAME}' ]</msg>
+<msg timestamp="20180124 12:44:17.827" level="TRACE">Return: None</msg>
+<status status="PASS" endtime="20180124 12:44:17.827" starttime="20180124 12:44:14.800"></status>
+</kw>
+<msg timestamp="20180124 12:44:17.828" level="TRACE">Return: None</msg>
+<status status="PASS" endtime="20180124 12:44:17.828" starttime="20180124 12:44:08.878"></status>
+</kw>
+<kw name="File Should Exist" library="SFA-APP1">
+<doc>Fails unless the given `path` points to an existing file.</doc>
+<arguments>
+<arg>C:\\Sheetmusic\\Powershell\\Purge Message Queues.ps1</arg>
+</arguments>
+<msg timestamp="20180124 12:44:17.828" level="TRACE">Arguments: [ 'C:\\Sheetmusic\\Powershell\\Purge Message Queues.ps1' ]</msg>
+<msg timestamp="20180124 12:44:26.235" html="yes" level="INFO">File '&lt;a href="file://C:\Sheetmusic\Powershell\Purge Message Queues.ps1"&gt;C:\Sheetmusic\Powershell\Purge Message Queues.ps1&lt;/a&gt;' exists</msg>
+<msg timestamp="20180124 12:44:26.235" level="TRACE">Return: b''</msg>
+<status status="PASS" endtime="20180124 12:44:26.236" starttime="20180124 12:44:17.828"></status>
+</kw>
+<kw name="Run And Return Rc And Output" library="SFA-APP1">
+<doc>Runs the given command in the system and returns the RC and output.</doc>
+<arguments>
+<arg>powershell.exe -File "C:\\Sheetmusic\\Powershell\\Purge Message Queues.ps1" "${SchedBuildNo}"</arg>
+</arguments>
+<assign>
+<var>${Return}</var>
+</assign>
+<msg timestamp="20180124 12:44:26.236" level="TRACE">Arguments: [ 'powershell.exe -File "C:\\Sheetmusic\\Powershell\\Purge Message Queues.ps1" "1.0.104.248"' ]</msg>
+<msg timestamp="20180124 12:44:27.302" level="INFO">Running command 'powershell.exe -File "C:\Sheetmusic\Powershell\Purge Message Queues.ps1" "1.0.104.248" 2&gt;&amp;1'</msg>
+<msg timestamp="20180124 12:44:27.302" level="TRACE">Return: [0,
+ b'Executing Purge Message Queues.PS1\nPurging queue .\\private$\\SheetMusic.ValidateSubmission\nPurging queue .\\private$\\SheetMusic.ValidateSubmissionFailed\nPurging queue .\\private$\\SheetMusic.ProcessItems\nPurging queue .\\private$\\SheetMusic.ProcessItemsFailed\nPurging queue .\\private$\\SheetMusic.CopyToArchive\nPurging queue .\\private$\\SheetMusic.CopyToArchiveFailed\nPurging queue .\\private$\\SheetMusic.CreateMets\nPurging queue .\\private$\\SheetMusic.CreateMetsFailed\nPurging queue .\\private$\\SheetMusic.CreateMarc\nPurging queue .\\private$\\SheetMusic.CreateMarcFailed\nPurging queue .\\private$\\SheetMusic.ValidateMarc\nPurging queue .\\private$\\SheetMusic.ValidateMarcFailed\nPurging queue .\\private$\\SheetMusic.UpdateMarcAfterValidation\nPurging queue .\\private$\\SheetMusic.UpdateMarcAfterValidationFailed\nPurging queue .\\private$\\SheetMusic.CreateVersionData\nPurging queue .\\private$\\SheetMusic.VersionDataCreationFailed\nPurging queue .\\private$\\SheetMusic.ValidateContent\nPurging queue .\\private$\\SheetMusic.ValidateContentFailed\nPurging queue .\\private$\\SheetMusic.CheckDuplicateEntity\nPurging queue .\\private$\\SheetMusic.CheckDuplicateEntityFailed\nPurging queue .\\private$\\SheetMusic.DuplicateContentCheck\nPurging queue .\\private$\\SheetMusic.DuplicateContentCheckFailed\nPurging queue .\\private$\\SheetMusic.RemoveNonIngestableFiles\nPurging queue .\\private$\\SheetMusic.RemoveNonIngestableFilesFailed\nPurging queue .\\private$\\SheetMusic.SameContentCheckMetadata\nPurging queue .\\private$\\SheetMusic.SameContentCheckMetadataFailed\nPurging queue .\\private$\\SheetMusic.NewContentCheckMetadata\nPurging queue .\\private$\\SheetMusic.NewContentCheckMetadataFailed\nPurging queue .\\private$\\SheetMusic.RejectIngest\nPurging queue .\\private$\\SheetMusic.RejectIngestFailed\nPurging queue .\\private$\\SheetMusic.ResubmitMetadataToAleph\nPurging queue .\\private$\\SheetMusic.ResubmitMetadataToAlephFailed\nPurging queue .\\private$\\SheetMusic.AddResubmissionAlephBehaviour\nPurging queue .\\private$\\SheetMusic.AddResubmissionAlephBehaviourFailed\nPurging queue .\\private$\\SheetMusic.UpdateContentStream\nPurging queue .\\private$\\SheetMusic.UpdateContentStreamFailed\nPurging queue .\\private$\\SheetMusic.CreateAlephBehaviour\nPurging queue .\\private$\\SheetMusic.CreateAlephBehaviourFailed\nPurging queue .\\private$\\SheetMusic.SubmitToSI\nPurging queue .\\private$\\SheetMusic.SubmitToSIFailed\nException calling "Exists" with "1" argument(s): "Cannot determine whether a qu\neue with the specified format name exists."\nAt C:\\Sheetmusic\\Powershell\\Purge Message Queues.ps1:21 char:49\n+     if (![System.Messaging.MessageQueue]::Exists &lt;&lt;&lt;&lt; ($entry.Value))\n    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException\n    + FullyQualifiedErrorId : DotNetMethodException\n \nPurging queue .\\private$\\SheetMusic.CleanUp\nPurging queue .\\private$\\SheetMusic.CleanUpFailed\nPurging queue .\\private$\\SheetMusic.Error\nPurging queue .\\private$\\reporting\nPurging queue .\\private$\\ForwardRetryMessages\nPurging queue .\\private$\\ForwardRetryMessagesFailed\nPurging queue .\\private$\\ForwardApprovalMessages\nPurging queue .\\private$\\ForwardApprovalMessagesFailed\nPurging queue .\\private$\\ForwardRejectMessages\nPurging queue .\\private$\\ForwardRejectMessagesFailed\nPurge Message Queues.PS1 - Complete']</msg>
+<msg timestamp="20180124 12:44:27.304" level="INFO">${Return} = [0, 'Executing Purge Message Queues.PS1\nPurging queue .\\private$\\SheetMusic.ValidateSubmission\nPurging queue .\\private$\\SheetMusic.ValidateSubmissionFailed\nPurging queue .\\private$\\SheetMusic...</msg>
+<status status="PASS" endtime="20180124 12:44:27.304" starttime="20180124 12:44:26.236"></status>
+</kw>
+<kw name="File Should Exist" library="SFA-APP1">
+<doc>Fails unless the given `path` points to an existing file.</doc>
+<arguments>
+<arg>C:\\Sheetmusic\\Powershell\\Cleardown Workflow Database.ps1</arg>
+</arguments>
+<msg timestamp="20180124 12:44:27.305" level="TRACE">Arguments: [ 'C:\\Sheetmusic\\Powershell\\Cleardown Workflow Database.ps1' ]</msg>
+<msg timestamp="20180124 12:44:32.756" html="yes" level="INFO">File '&lt;a href="file://C:\Sheetmusic\Powershell\Cleardown Workflow Database.ps1"&gt;C:\Sheetmusic\Powershell\Cleardown Workflow Database.ps1&lt;/a&gt;' exists</msg>
+<msg timestamp="20180124 12:44:32.756" level="TRACE">Return: b''</msg>
+<status status="PASS" endtime="20180124 12:44:32.756" starttime="20180124 12:44:27.305"></status>
+</kw>
+<kw name="Run And Return Rc And Output" library="SFA-APP1">
+<doc>Runs the given command in the system and returns the RC and output.</doc>
+<arguments>
+<arg>powershell.exe -File "C:\\Sheetmusic\\Powershell\\Cleardown Workflow Database.ps1"</arg>
+</arguments>
+<assign>
+<var>${Results}</var>
+</assign>
+<msg timestamp="20180124 12:44:32.757" level="TRACE">Arguments: [ 'powershell.exe -File "C:\\Sheetmusic\\Powershell\\Cleardown Workflow Database.ps1"' ]</msg>
+<msg timestamp="20180124 12:44:34.918" level="INFO">Running command 'powershell.exe -File "C:\Sheetmusic\Powershell\Cleardown Workflow Database.ps1" 2&gt;&amp;1'</msg>
+<msg timestamp="20180124 12:44:34.918" level="TRACE">Return: [0, b'Executing Cleardown Workflow Database.PS1\n0\nCleardown Workflow Database.PS1 - Complete']</msg>
+<msg timestamp="20180124 12:44:34.919" level="INFO">${Results} = [0, 'Executing Cleardown Workflow Database.PS1\n0\nCleardown Workflow Database.PS1 - Complete']</msg>
+<status status="PASS" endtime="20180124 12:44:34.919" starttime="20180124 12:44:32.757"></status>
+</kw>
+<kw name="File Should Exist" library="SFA-APP1">
+<doc>Fails unless the given `path` points to an existing file.</doc>
+<arguments>
+<arg>C:\\Sheetmusic\\Powershell\\Clear Log Files.ps1</arg>
+</arguments>
+<msg timestamp="20180124 12:44:34.920" level="TRACE">Arguments: [ 'C:\\Sheetmusic\\Powershell\\Clear Log Files.ps1' ]</msg>
+<msg timestamp="20180124 12:44:36.552" html="yes" level="INFO">File '&lt;a href="file://C:\Sheetmusic\Powershell\Clear Log Files.ps1"&gt;C:\Sheetmusic\Powershell\Clear Log Files.ps1&lt;/a&gt;' exists</msg>
+<msg timestamp="20180124 12:44:36.553" level="TRACE">Return: b''</msg>
+<status status="PASS" endtime="20180124 12:44:36.553" starttime="20180124 12:44:34.919"></status>
+</kw>
+<kw name="Run And Return Rc And Output" library="SFA-APP1">
+<doc>Runs the given command in the system and returns the RC and output.</doc>
+<arguments>
+<arg>powershell.exe -File "C:\\Sheetmusic\\Powershell\\Clear Log Files.ps1" "${SchedBuildNo}"</arg>
+</arguments>
+<assign>
+<var>${Results}</var>
+</assign>
+<msg timestamp="20180124 12:44:36.554" level="TRACE">Arguments: [ 'powershell.exe -File "C:\\Sheetmusic\\Powershell\\Clear Log Files.ps1" "1.0.104.248"' ]</msg>
+<msg timestamp="20180124 12:44:37.203" level="INFO">Running command 'powershell.exe -File "C:\Sheetmusic\Powershell\Clear Log Files.ps1" "1.0.104.248" 2&gt;&amp;1'</msg>
+<msg timestamp="20180124 12:44:37.203" level="TRACE">Return: [0,
+ b'Executing Clear Log Files.PS1\nRemove-Item : Cannot remove item C:\\Octopus\\Applications\\Testing\\BL.DLS.SheetMu\nsic.Scheduler\\1.0.104.248\\log.txt: The process cannot access the file \'C:\\Octop\nus\\Applications\\Testing\\BL.DLS.SheetMusic.Scheduler\\1.0.104.248\\log.txt\' becaus\ne it is being used by another process.\nAt C:\\Sheetmusic\\Powershell\\Clear Log Files.ps1:9 char:12\n+ Remove-Item &lt;&lt;&lt;&lt;  "C:\\Octopus\\Applications\\Testing\\BL.DLS.SheetMusic.Schedule\nr\\$Build\\log.txt"\n    + CategoryInfo          : WriteError: (C:\\Octopus\\Appl...104.248\\log.txt:F \n   ileInfo) [Remove-Item], IOException\n    + FullyQualifiedErrorId : RemoveFileSystemItemIOError,Microsoft.PowerShell \n   .Commands.RemoveItemCommand\nClear Log Files.PS1 - Complete']</msg>
+<msg timestamp="20180124 12:44:37.205" level="INFO">${Results} = [0, 'Executing Clear Log Files.PS1\nRemove-Item : Cannot remove item C:\\Octopus\\Applications\\Testing\\BL.DLS.SheetMu\nsic.Scheduler\\1.0.104.248\\log.txt: The process cannot access the file \'C:\\O...</msg>
+<status status="PASS" endtime="20180124 12:44:37.205" starttime="20180124 12:44:36.553"></status>
+</kw>
+<kw name="File Should Exist" library="SFA-APP1">
+<doc>Fails unless the given `path` points to an existing file.</doc>
+<arguments>
+<arg>C:\\Sheetmusic\\Powershell\\Cleardown Mddb Database.ps1</arg>
+</arguments>
+<msg timestamp="20180124 12:44:37.207" level="TRACE">Arguments: [ 'C:\\Sheetmusic\\Powershell\\Cleardown Mddb Database.ps1' ]</msg>
+<msg timestamp="20180124 12:44:41.280" html="yes" level="INFO">File '&lt;a href="file://C:\Sheetmusic\Powershell\Cleardown Mddb Database.ps1"&gt;C:\Sheetmusic\Powershell\Cleardown Mddb Database.ps1&lt;/a&gt;' exists</msg>
+<msg timestamp="20180124 12:44:41.281" level="TRACE">Return: b''</msg>
+<status status="PASS" endtime="20180124 12:44:41.281" starttime="20180124 12:44:37.206"></status>
+</kw>
+<kw name="Run And Return Rc And Output" library="SFA-APP1">
+<doc>Runs the given command in the system and returns the RC and output.</doc>
+<arguments>
+<arg>powershell.exe -File "C:\\Sheetmusic\\Powershell\\Cleardown Mddb Database.ps1" "${SchedBuildNo}"</arg>
+</arguments>
+<assign>
+<var>${Results}</var>
+</assign>
+<msg timestamp="20180124 12:44:41.282" level="TRACE">Arguments: [ 'powershell.exe -File "C:\\Sheetmusic\\Powershell\\Cleardown Mddb Database.ps1" "1.0.104.248"' ]</msg>
+<msg timestamp="20180124 12:44:44.376" level="INFO">Running command 'powershell.exe -File "C:\Sheetmusic\Powershell\Cleardown Mddb Database.ps1" "1.0.104.248" 2&gt;&amp;1'</msg>
+<msg timestamp="20180124 12:44:44.376" level="TRACE">Return: [0, b'Executing Cleardown Mddb Database.PS1\n0\nCleardown Mddb Database.PS1 - Complete']</msg>
+<msg timestamp="20180124 12:44:44.377" level="INFO">${Results} = [0, 'Executing Cleardown Mddb Database.PS1\n0\nCleardown Mddb Database.PS1 - Complete']</msg>
+<status status="PASS" endtime="20180124 12:44:44.377" starttime="20180124 12:44:41.281"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${Return}</arg>
+</arguments>
+<msg timestamp="20180124 12:44:44.378" level="TRACE">Arguments: [ [0,
+ b'Executing Purge Message Queues.PS1\nPurging queue .\\private$\\SheetMusic.ValidateSubmission\nPurging queue .\\private$\\SheetMusic.ValidateSubmissionFailed\nPurging queue .\\private$\\SheetMusic.ProcessItems\nPurging queue .\\private$\\SheetMusic.ProcessItemsFailed\nPurging queue .\\private$\\SheetMusic.CopyToArchive\nPurging queue .\\private$\\SheetMusic.CopyToArchiveFailed\nPurging queue .\\private$\\SheetMusic.CreateMets\nPurging queue .\\private$\\SheetMusic.CreateMetsFailed\nPurging queue .\\private$\\SheetMusic.CreateMarc\nPurging queue .\\private$\\SheetMusic.CreateMarcFailed\nPurging queue .\\private$\\SheetMusic.ValidateMarc\nPurging queue .\\private$\\SheetMusic.ValidateMarcFailed\nPurging queue .\\private$\\SheetMusic.UpdateMarcAfterValidation\nPurging queue .\\private$\\SheetMusic.UpdateMarcAfterValidationFailed\nPurging queue .\\private$\\SheetMusic.CreateVersionData\nPurging queue .\\private$\\SheetMusic.VersionDataCreationFailed\nPurging queue .\\private$\\SheetMusic.ValidateContent\nPurging queue .\\private$\\SheetMusic.ValidateContentFailed\nPurging queue .\\private$\\SheetMusic.CheckDuplicateEntity\nPurging queue .\\private$\\SheetMusic.CheckDuplicateEntityFailed\nPurging queue .\\private$\\SheetMusic.DuplicateContentCheck\nPurging queue .\\private$\\SheetMusic.DuplicateContentCheckFailed\nPurging queue .\\private$\\SheetMusic.RemoveNonIngestableFiles\nPurging queue .\\private$\\SheetMusic.RemoveNonIngestableFilesFailed\nPurging queue .\\private$\\SheetMusic.SameContentCheckMetadata\nPurging queue .\\private$\\SheetMusic.SameContentCheckMetadataFailed\nPurging queue .\\private$\\SheetMusic.NewContentCheckMetadata\nPurging queue .\\private$\\SheetMusic.NewContentCheckMetadataFailed\nPurging queue .\\private$\\SheetMusic.RejectIngest\nPurging queue .\\private$\\SheetMusic.RejectIngestFailed\nPurging queue .\\private$\\SheetMusic.ResubmitMetadataToAleph\nPurging queue .\\private$\\SheetMusic.ResubmitMetadataToAlephFailed\nPurging queue .\\private$\\SheetMusic.AddResubmissionAlephBehaviour\nPurging queue .\\private$\\SheetMusic.AddResubmissionAlephBehaviourFailed\nPurging queue .\\private$\\SheetMusic.UpdateContentStream\nPurging queue .\\private$\\SheetMusic.UpdateContentStreamFailed\nPurging queue .\\private$\\SheetMusic.CreateAlephBehaviour\nPurging queue .\\private$\\SheetMusic.CreateAlephBehaviourFailed\nPurging queue .\\private$\\SheetMusic.SubmitToSI\nPurging queue .\\private$\\SheetMusic.SubmitToSIFailed\nException calling "Exists" with "1" argument(s): "Cannot determine whether a qu\neue with the specified format name exists."\nAt C:\\Sheetmusic\\Powershell\\Purge Message Queues.ps1:21 char:49\n+     if (![System.Messaging.MessageQueue]::Exists &lt;&lt;&lt;&lt; ($entry.Value))\n    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException\n    + FullyQualifiedErrorId : DotNetMethodException\n \nPurging queue .\\private$\\SheetMusic.CleanUp\nPurging queue .\\private$\\SheetMusic.CleanUpFailed\nPurging queue .\\private$\\SheetMusic.Error\nPurging queue .\\private$\\reporting\nPurging queue .\\private$\\ForwardRetryMessages\nPurging queue .\\private$\\ForwardRetryMessagesFailed\nPurging queue .\\private$\\ForwardApprovalMessages\nPurging queue .\\private$\\ForwardApprovalMessagesFailed\nPurging queue .\\private$\\ForwardRejectMessages\nPurging queue .\\private$\\ForwardRejectMessagesFailed\nPurge Message Queues.PS1 - Complete'] ]</msg>
+<msg timestamp="20180124 12:44:44.381" level="INFO">[0, 'Executing Purge Message Queues.PS1\nPurging queue .\\private$\\SheetMusic.ValidateSubmission\nPurging queue .\\private$\\SheetMusic.ValidateSubmissionFailed\nPurging queue .\\private$\\SheetMusic.ProcessItems\nPurging queue .\\private$\\SheetMusic.ProcessItemsFailed\nPurging queue .\\private$\\SheetMusic.CopyToArchive\nPurging queue .\\private$\\SheetMusic.CopyToArchiveFailed\nPurging queue .\\private$\\SheetMusic.CreateMets\nPurging queue .\\private$\\SheetMusic.CreateMetsFailed\nPurging queue .\\private$\\SheetMusic.CreateMarc\nPurging queue .\\private$\\SheetMusic.CreateMarcFailed\nPurging queue .\\private$\\SheetMusic.ValidateMarc\nPurging queue .\\private$\\SheetMusic.ValidateMarcFailed\nPurging queue .\\private$\\SheetMusic.UpdateMarcAfterValidation\nPurging queue .\\private$\\SheetMusic.UpdateMarcAfterValidationFailed\nPurging queue .\\private$\\SheetMusic.CreateVersionData\nPurging queue .\\private$\\SheetMusic.VersionDataCreationFailed\nPurging queue .\\private$\\SheetMusic.ValidateContent\nPurging queue .\\private$\\SheetMusic.ValidateContentFailed\nPurging queue .\\private$\\SheetMusic.CheckDuplicateEntity\nPurging queue .\\private$\\SheetMusic.CheckDuplicateEntityFailed\nPurging queue .\\private$\\SheetMusic.DuplicateContentCheck\nPurging queue .\\private$\\SheetMusic.DuplicateContentCheckFailed\nPurging queue .\\private$\\SheetMusic.RemoveNonIngestableFiles\nPurging queue .\\private$\\SheetMusic.RemoveNonIngestableFilesFailed\nPurging queue .\\private$\\SheetMusic.SameContentCheckMetadata\nPurging queue .\\private$\\SheetMusic.SameContentCheckMetadataFailed\nPurging queue .\\private$\\SheetMusic.NewContentCheckMetadata\nPurging queue .\\private$\\SheetMusic.NewContentCheckMetadataFailed\nPurging queue .\\private$\\SheetMusic.RejectIngest\nPurging queue .\\private$\\SheetMusic.RejectIngestFailed\nPurging queue .\\private$\\SheetMusic.ResubmitMetadataToAleph\nPurging queue .\\private$\\SheetMusic.ResubmitMetadataToAlephFailed\nPurging queue .\\private$\\SheetMusic.AddResubmissionAlephBehaviour\nPurging queue .\\private$\\SheetMusic.AddResubmissionAlephBehaviourFailed\nPurging queue .\\private$\\SheetMusic.UpdateContentStream\nPurging queue .\\private$\\SheetMusic.UpdateContentStreamFailed\nPurging queue .\\private$\\SheetMusic.CreateAlephBehaviour\nPurging queue .\\private$\\SheetMusic.CreateAlephBehaviourFailed\nPurging queue .\\private$\\SheetMusic.SubmitToSI\nPurging queue .\\private$\\SheetMusic.SubmitToSIFailed\nException calling "Exists" with "1" argument(s): "Cannot determine whether a qu\neue with the specified format name exists."\nAt C:\\Sheetmusic\\Powershell\\Purge Message Queues.ps1:21 char:49\n+     if (![System.Messaging.MessageQueue]::Exists &lt;&lt;&lt;&lt; ($entry.Value))\n    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException\n    + FullyQualifiedErrorId : DotNetMethodException\n \nPurging queue .\\private$\\SheetMusic.CleanUp\nPurging queue .\\private$\\SheetMusic.CleanUpFailed\nPurging queue .\\private$\\SheetMusic.Error\nPurging queue .\\private$\\reporting\nPurging queue .\\private$\\ForwardRetryMessages\nPurging queue .\\private$\\ForwardRetryMessagesFailed\nPurging queue .\\private$\\ForwardApprovalMessages\nPurging queue .\\private$\\ForwardApprovalMessagesFailed\nPurging queue .\\private$\\ForwardRejectMessages\nPurging queue .\\private$\\ForwardRejectMessagesFailed\nPurge Message Queues.PS1 - Complete']</msg>
+<msg timestamp="20180124 12:44:44.381" level="TRACE">Return: None</msg>
+<status status="PASS" endtime="20180124 12:44:44.381" starttime="20180124 12:44:44.377"></status>
+</kw>
+<kw name="Close Connection" library="SSHLibrary">
+<doc>Closes the current connection.</doc>
+<msg timestamp="20180124 12:44:44.382" level="TRACE">Arguments: [  ]</msg>
+<msg timestamp="20180124 12:44:44.445" level="TRACE">Return: None</msg>
+<status status="PASS" endtime="20180124 12:44:44.445" starttime="20180124 12:44:44.382"></status>
+</kw>
+<msg timestamp="20180124 12:44:44.445" level="TRACE">Return: None</msg>
+<status status="PASS" endtime="20180124 12:44:44.445" starttime="20180124 12:44:08.878"></status>
+</kw>
+<status status="PASS" endtime="20180124 12:44:44.446" critical="yes" starttime="20180124 12:44:08.877"></status>
+</test>
+<status status="PASS" endtime="20180124 12:44:44.447" starttime="20180124 12:43:48.778"></status>
+</suite>
+<status status="PASS" endtime="20180124 12:44:44.450" starttime="20180124 12:43:48.775"></status>
+</suite>
+<status status="PASS" endtime="20180124 12:44:44.452" starttime="20180124 12:43:48.051"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Sheet Music" pass="1">Sheet Music</stat>
+<stat fail="0" id="s1-s1" name="ATests" pass="1">Sheet Music.ATests</stat>
+<stat fail="0" id="s1-s1-s1" name="17AddInUI" pass="1">Sheet Music.ATests.17AddInUI</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
