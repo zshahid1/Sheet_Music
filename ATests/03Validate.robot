@@ -30,5 +30,5 @@ Check if status updates to SubmissionValid
     Connect
     check if exists in database  SELECT * FROM [workflow].[dbo].[WorkflowEntityActivity] WHERE Status LIKE 'SubmissionValid'
 
-Check if message appears in SheetMusic.CopyToArchive
-    Check Queue Message journal Value  1  .\\private$\\sheetmusic.copytoarchive
+#Check if message appears in SheetMusic.CopyToArchive - removed from WorkflowDB
+#    Check Queue Message journal Value  1  .\\private$\\sheetmusic.copytoarchive

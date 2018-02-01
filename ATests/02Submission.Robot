@@ -38,8 +38,8 @@ Check if file in Working folder
 Stop SheetMusic Scheduler
     stop sheetmusic scheduler
 
-Check Queue Message Value for Copy to archive
-    Check Queue Message journal Value  1  .\\private$\\sheetmusic.copytoarchive
+#Check Queue Message Value for Copy to archive - removed from WorkflowDB
+#    Check Queue Message journal Value  1  .\\private$\\sheetmusic.copytoarchive
 
 Scheduler should delete submission from FTP
     SSHLibrary.Open Connection    192.168.246.101

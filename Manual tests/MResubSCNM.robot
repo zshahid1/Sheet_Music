@@ -21,7 +21,7 @@ Check submission has already gone through to completed
 Turn ValidateContent instance to 0
 
 
-Resubmit a file with a different pdf
+Resubmit file 
      run ftp file submission
 
 Stop scheduler
