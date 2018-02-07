@@ -47,7 +47,7 @@ Check status: DuplicateEntityFound to Completed
 Check marc file should contain a 985 datafield/tag (see example attached)
 
 
-Check marc file should contain a ITM datafield/tag (should contain previous submissions mdark, see example attached)
+Check marc file should contain a ITM datafield/tag 
 
 
 Check mdRef href should contain the previous submissions mdark (see example attached)
