@@ -1,12 +1,12 @@
 *** Settings ***
-#Resource  ../Resources/Keywords.robot
+Resource  ../Resources/Keywords.robot
 Library  String
 #Library  Dialogs
 Library  Selenium2Library
 Library  DatabaseLibrary
 Library  OperatingSystem
 Library  SSHLibrary
-Library  String
+
 
 *** Variables ***
 
