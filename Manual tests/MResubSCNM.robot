@@ -21,7 +21,7 @@ Check submission has already gone through to completed
 Turn ValidateContent instance to 0
 
 
-Resubmit file 
+Resubmit file
      run ftp file submission
 
 Stop scheduler
@@ -47,10 +47,10 @@ Check status: DuplicateEntityFound to Completed
 Check marc file should contain a 985 datafield/tag (see example attached)
 
 
-Check marc file should contain a ITM datafield/tag (should contain previous submission's mdark, see example attached)
+Check marc file should contain a ITM datafield/tag (should contain previous submissions mdark, see example attached)
 
 
-Check mdRef href should contain the previous submission's mdark (see example attached)
+Check mdRef href should contain the previous submissions mdark (see example attached)
 
 
 Check marc should be added to the Aleph day file
