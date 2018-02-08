@@ -1,5 +1,4 @@
 *** Settings ***
-Resource  ../Resources/Keywords.robot
 Library  String
 #Library  Dialogs
 Library  Selenium2Library

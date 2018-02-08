@@ -4,7 +4,7 @@ Library  OperatingSystem
 Library  XML
 Library  Dialogs
 Library  DatabaseLibrary
-Resource  ../Resources/Keywords.robot
+#Resource  ../Resources/Keywords.robot
 Resource  ../Resources/DB/SQL_Server.robot
 
 *** Test Cases ***
