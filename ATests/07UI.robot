@@ -14,7 +14,7 @@ ${DATABASE}         192.168.245.60
 *** Test Cases ***
 #17654 - Expose Digital Sheet Music (DSM) in the UI
 
-Content stream in list
+View SheetMusic Content stream in list
 #1
     open browser  http://192.168.245.100/BL.DLS.IngestManagement.Console/Collection/  firefox
     click link   SheetMusic
@@ -25,7 +25,7 @@ Content stream in list
     click link  View
     close browser
 
-Workflow monitor    #Check if SheetMusic files are filtered and visible
+Workflow monitor containing SheetMusic    #Check if SheetMusic files are filtered and visible
     open browser  http://sting1.ad.bl.uk/BL.DLS.IngestManagement.Console/WorkflowMonitor/  firefox
     sleep  2s
     click element  xpath=//*[@id="SelectedStreamFilterCriteria"]/option[6]
