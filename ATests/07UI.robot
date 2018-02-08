@@ -1,7 +1,8 @@
 *** Settings ***
 Library  Selenium2Library
 Library  DatabaseLibrary
-
+Resource  ../Resources/Powershell/PowershellKeywords.robot
+Suite Setup  Set IE Protected Mode
 
 *** Variables ***
 
@@ -10,13 +11,11 @@ ${START_URL} =  http://192.168.245.100/BL.DLS.IngestManagement.Console/Collectio
 ${DATABASE}         192.168.245.60
 @{DB_LOGIN}         sa  Pa55word
 
-
 *** Test Cases ***
 #17654 - Expose Digital Sheet Music (DSM) in the UI
 
 View SheetMusic Content stream in list
-#1
-    open browser  http://192.168.245.100/BL.DLS.IngestManagement.Console/Collection/  firefox
+    open browser  http://192.168.245.100/BL.DLS.IngestManagement.Console/Collection/  chrome
     click link   SheetMusic
 #1.1 Status page
     click link  SubmittedForIngest
