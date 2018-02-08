@@ -60,13 +60,12 @@ Check Marc file contains a 985 tag
     element should exist  ${root}  xpath=.//
     XML.element should exist  ${root}  xpath=.//
 
-Check marc file should contain a ITM datafield/tag (should contain previous submission's mdark, see example attached)
+Check marc file should contain a ITM datafield/tag
      ${root}=  Parse xml   \\\\SFA-APP1\\Sheetmusic\\MusicSales\\Working\\smd_147721\\smd_147721_Mets.xml
      ${valid}  get element text  ${root}  xpath=.//datafield[@tag='985']/subfield[@code='a']
      should be equal  '${valid}'  'NewContentNewMetadata'
 
 Check mdRef href should contain the previous submission's mdark (see example attached)
-
 
 
 Check passes through SI successfully
