@@ -1,12 +1,10 @@
 
-# 19385:Re-submission/duplication - New content, New metadata
-
 *** Settings ***
 Library  SSHLibrary
 Library  OperatingSystem
 Library  DatabaseLibrary
 Library  XML  use_lxml=True
-Library  lxml
+#Library  lxml
 Resource  ../Resources/Keywords.robot
 
 *** Variables ***

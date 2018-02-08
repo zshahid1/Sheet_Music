@@ -1,7 +1,7 @@
 *** Settings ***
 Library  SSHLibrary
 Library  OperatingSystem
-Resource  ../Resources/DB/SQL_Server.robot
+#Resource  ../Resources/DB/SQL_Server.robot
 Resource  ../Resources/Keywords.robot
 
 

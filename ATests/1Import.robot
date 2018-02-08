@@ -1,7 +1,7 @@
 *** Settings ***
 Library  OperatingSystem
 Resource  ../Resources/DB/SQL_Server.robot
-Resource  ../Resources/Keywords.robot
+#Resource  ../Resources/Keywords.robot
 Suite Teardown  Cleardown SheetMusic Database
 
 *** Variables ***
