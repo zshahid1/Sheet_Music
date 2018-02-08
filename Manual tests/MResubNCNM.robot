@@ -43,7 +43,7 @@ Edit mdhash element in the Mets file
 Turn ValidateContent instance to 1
 
 
-start scheduker
+start scheduler
     start sheet music scheduler
 
 
@@ -65,7 +65,7 @@ Check marc file should contain a ITM datafield/tag
      ${valid}  get element text  ${root}  xpath=.//datafield[@tag='985']/subfield[@code='a']
      should be equal  '${valid}'  'NewContentNewMetadata'
 
-Check mdRef href should contain the previous submission's mdark (see example attached)
+Check mdRef href should contain the previous submissions mdark (see example attached)
 
 
 Check passes through SI successfully

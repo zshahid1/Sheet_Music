@@ -22,7 +22,7 @@ Run duplicate FTP file submission
     start sheetmusic scheduler
     run ftp file submission for sheetmusic
 
-Check duplicate submission = DuplicateEntityFound, NoNewContentFound
+Check duplicate submission = DuplicateEntityFound - NoNewContentFound
     sleep  27s
     connect
     check if exists in database  SELECT * FROM [workflow].[dbo].[WorkflowEntityActivity] WHERE Status = 'DuplicateEntityFound'

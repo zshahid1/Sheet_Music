@@ -20,7 +20,7 @@ Check Message queue for SheetMusic Validate content
     sleep  19s
     Check Queue Message journal Value  2  .\\private$\\SheetMusic.Validatecontent
 
-Jhove scenarios  #XML contains success  <premis:eventOutcome>Not Well-Formed</premis:eventOutcome>
+Jhove scenarios
     ${root}=  Parse XML  ${Jhove Fail}
     XML.Element Should Exist    ${root}  xpath=.//digiprovMD[@ID='amd00000001-event001']//eventOutcome
 #    should be equal  ${test}  'Not Well-Formed' normalize_whitespace=True

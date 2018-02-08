@@ -44,13 +44,13 @@ Check status: DuplicateEntityFound to Completed
     check if exists in database  SELECT * FROM [workflow].[dbo].[WorkflowEntityActivity] WHERE Status LIKE '%ResubmitMetadataToAlephSucceeded'
     check if exists in database  SELECT * FROM [workflow].[dbo].[WorkflowEntityActivity] WHERE Status LIKE '%Completed'
 
-Check marc file should contain a 985 datafield/tag (see example attached)
+Check marc file should contain a 985 datafield/tag
 
 
 Check marc file should contain a ITM datafield/tag
 
 
-Check mdRef href should contain the previous submissions mdark (see example attached)
+Check mdRef href should contain the previous submissions mdark
 
 
 Check marc should be added to the Aleph day file

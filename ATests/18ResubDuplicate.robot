@@ -20,7 +20,7 @@ Positive - DuplicateEntityNotFound in the history
 Wait for submission to finish
     sleep  27s
 
-Check duplicate submission = DuplicateEntityFound, NoNewContentFound
+Check duplicate submission = DuplicateEntityFound - NoNewContentFound
     connect
     check if exists in database  SELECT * FROM [workflow].[dbo].[WorkflowEntityActivity] WHERE Status = 'DuplicateEntityFound'
     check if exists in database  SELECT * FROM [workflow].[dbo].[WorkflowEntityActivity] WHERE Status = 'NoNewContentFound'
