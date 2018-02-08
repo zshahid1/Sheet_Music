@@ -16,7 +16,7 @@ ${DATABASE}         192.168.245.60
 
 Content stream in list
 #1
-    open browser  http://192.168.245.100/BL.DLS.IngestManagement.Console/Collection/  ie
+    open browser  http://192.168.245.100/BL.DLS.IngestManagement.Console/Collection/  firefox
     click link   SheetMusic
 #1.1 Status page
     click link  SubmittedForIngest
@@ -26,7 +26,7 @@ Content stream in list
     close browser
 
 Workflow monitor    #Check if SheetMusic files are filtered and visible
-    open browser  http://sting1.ad.bl.uk/BL.DLS.IngestManagement.Console/WorkflowMonitor/  ie
+    open browser  http://sting1.ad.bl.uk/BL.DLS.IngestManagement.Console/WorkflowMonitor/  firefox
     sleep  2s
     click element  xpath=//*[@id="SelectedStreamFilterCriteria"]/option[6]
     sleep  2s
