@@ -47,14 +47,14 @@ Run SheetMusicMetadataImporter
 Run FTP file submission for SheetMusic
     SSHLibrary.Open Connection    192.168.246.101
     SSHLibrary.Login    Administrator    Pa55word
-    SSHLibrary.Put File  \\\\192.168.245.55\\Sheetmusic\\Test files\\valid test files\\smd_147709.zip  /D/ECO/FTPUnsecure/SheetMusic MusicSales/
 #    SSHLibrary.Put File  \\\\192.168.245.55\\Sheetmusic\\Test files\\valid test files\\smd_147709.zip  /D/ECO/FTPUnsecure/SheetMusic MusicSales/
-#    SSHLibrary.Put File  \\\\192.168.245.55\\Sheetmusic\\Test files\\valid test files\\smd_134342.zip  /D/ECO/FTPUnsecure/SheetMusic MusicSales/
+#    SSHLibrary.Put File  \\\\192.168.245.55\\Sheetmusic\\Test files\\valid test files\\smd_.zip  /D/ECO/FTPUnsecure/SheetMusic MusicSales/
+    SSHLibrary.Put File  \\\\192.168.245.55\\Sheetmusic\\Test files\\valid test files\\smd_134342.zip  /D/ECO/FTPUnsecure/SheetMusic MusicSales/
 
 Run FTP duplicate file different pdf submission for SheetMusic
     SSHLibrary.Open Connection    192.168.246.101
     SSHLibrary.Login    Administrator    Pa55word
-    SSHLibrary.Put File  \\\\192.168.245.55\\Sheetmusic\\Test files\\Different PDF\\smd_147709.zip  /D/ECO/FTPUnsecure/SheetMusic MusicSales/
+    SSHLibrary.Put File  \\\\192.168.245.55\\Sheetmusic\\Test files\\Different PDF\\smd_134342.zip  /D/ECO/FTPUnsecure/SheetMusic MusicSales/
 
 Run Jhove failure file submission
     SSHLibrary.Open Connection    192.168.246.101

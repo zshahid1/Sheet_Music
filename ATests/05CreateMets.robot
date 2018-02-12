@@ -19,7 +19,7 @@ ${DB_NAME} =  SheetMusicDirectCatalogue
 
 Check if mets file created
     Open Predefined APP Server Connection
-    SFA-APP1.file should exist  C:\\Sheetmusic\\MusicSales\\Working\\smd_147709\\smd_147709_Mets.xml
+    SFA-APP1.file should exist  C:\\Sheetmusic\\MusicSales\\Working\\smd_134342\\smd_134342_Mets.xml
 
 Check Mets file status
     connect

@@ -20,7 +20,7 @@ ${DB_NAME} =  SheetMusicDirectCatalogue
 
 Check file exists in Working folder
     Open Predefined APP Server Connection
-    SFA-APP1.directory should exist  C:\\Sheetmusic\\MusicSales\\Working\\smd_147709
+    SFA-APP1.directory should exist  C:\\Sheetmusic\\MusicSales\\Working\\smd_134342
 
 #Check Queue Message Value for Copy to archive - Removed from WorkflowDB
 #    Check Queue Message journal Value  1  .\\private$\\sheetmusic.copytoarchive

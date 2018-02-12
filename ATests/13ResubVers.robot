@@ -6,7 +6,7 @@ Resource  ../Resources/Keywords.robot
 #Resource  ../Resources/DB/SQL_Server.robot
 
 *** Variables ***
-${Xml File}  //SFA-APP1/Sheetmusic/MusicSales/Working/smd_147709/smd_147709_Mets.xml
+${Xml File}  //SFA-APP1/Sheetmusic/MusicSales/Working/smd_134342/smd_134342_Mets.xml
 ${HashValue}  bfb73ad56187b2e2106ec71ae888aa993b5df6eed6f1f7dc8f71a61fea3ccb5d
 
 *** Test Cases ***
@@ -18,6 +18,11 @@ Check versioning data mdHash
     element should exist  ${root}  xpath=.//mdhash
     XML.element should exist  ${root}  xpath=.//mdhash
     should be equal  '${hashvalue}'  'bfb73ad56187b2e2106ec71ae888aa993b5df6eed6f1f7dc8f71a61fea3ccb5d'
+
+Check ITM record and ARK has been added
+    ${root} =  Parse XML  ${Xml File}
+    element should exist  ${root}  xpath=.//datafield[@tag='ITM']
+    XML.element should exist  ${root}  xpath=.//datafield[@tag='ITM']
 
 Start STING
    start sting scheduler

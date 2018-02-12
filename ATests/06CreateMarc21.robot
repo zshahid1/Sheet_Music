@@ -12,7 +12,7 @@ ${DB_HOST} =  192.168.245.60
 ${DB_PORT} =  9433
 ${PREVIOUS_ROW_COUNT}
 ${DB_NAME} =  SheetMusicDirectCatalogue
-${Xml File}   //SFA-APP1/Sheetmusic/MusicSales/Working/smd_147709/smd_147709_Mets.xml
+${Xml File}   //SFA-APP1/Sheetmusic/MusicSales/Working/smd_134342/smd_134342_Mets.xml
 
 *** Test Cases ***
 #17651 - PreProcessor/Loader for Music Sales

@@ -31,7 +31,7 @@ Check duplicate submission = DuplicateEntityFound - NoNewContentFound
 Check duplicate submission
     SSHLibrary.Open Connection    192.168.246.101
     SSHLibrary.Login    Administrator    Pa55word
-    SSHLibrary.File should not exist  /D/ECO/FTPUnsecure/SheetMusic MusicSales/smd_147709.zip
+    SSHLibrary.File should not exist  /D/ECO/FTPUnsecure/SheetMusic MusicSales/smd_134342.zip
 
 Check duplicate entity queue
     Check Queue Message journal Value  4  .\\private$\\sheetmusic.CheckDuplicateEntity

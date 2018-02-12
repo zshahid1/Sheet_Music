@@ -8,7 +8,7 @@ Library  string
 #Resource  ../Resources/DB/SQL_Server.robot
 
 *** Variables ***
-${147709mets}  \\\\SFA-APP1\\Sheetmusic\\Test files\\smd_147709_Mets.xml
+${147709mets}  \\\\SFA-APP1\\Sheetmusic\\Test files\\smd_134342_Mets.xml
 ${Workflowconfig}      \\\\SFA-APP1\\Sheetmusic\\Test files\\workflow.config
 ${ActionPrefix}         SheetMusic.
 ${Cleanup}              CleanUp

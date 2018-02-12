@@ -6,7 +6,7 @@ Resource  ../Resources/DB/SQL_Server.robot
 Resource  ../Resources/Keywords.robot
 
 *** Variables ***
-${Xml File}  //SFA-APP1/Sheetmusic/MusicSales/Working/smd_147709/smd_147709_Mets.xml
+${Xml File}  //SFA-APP1/Sheetmusic/MusicSales/Working/smd_134342/smd_134342_Mets.xml
 
 *** Test Cases ***
 

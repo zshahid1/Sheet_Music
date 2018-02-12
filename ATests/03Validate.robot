@@ -18,13 +18,13 @@ ${DB_NAME} =  SheetMusicDirectCatalogue
 
 Check if file in Working folder
     Open Predefined APP Server Connection
-    SFA-APP1.directory should exist  C:\\Sheetmusic\\MusicSales\\Working\\smd_147709
-    SFA-APP1.file should exist  C:\\Sheetmusic\\MusicSales\\Working\\smd_147709\\smd_147709.pdf
+    SFA-APP1.directory should exist  C:\\Sheetmusic\\MusicSales\\Working\\smd_134342
+    SFA-APP1.file should exist  C:\\Sheetmusic\\MusicSales\\Working\\smd_134342\\smd_134342.pdf
 
 
 Check if scheduler converts metadata file to XML
     Open Predefined APP Server Connection
-    SFA-APP1.file should exist  C:\\Sheetmusic\\MusicSales\\Working\\smd_147709\\smd_147709_Metadata.xml
+    SFA-APP1.file should exist  C:\\Sheetmusic\\MusicSales\\Working\\smd_134342\\smd_134342_Metadata.xml
 
 Check if status updates to SubmissionValid
     Connect

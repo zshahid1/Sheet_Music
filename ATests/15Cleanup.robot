@@ -26,8 +26,8 @@ Wait for cleanup
 
 Check if scheduler removes files from working folder
     Open Predefined APP Server Connection
-    SFA-APP1.directory should not exist  C:\\Sheetmusic\\MusicSales\\Working\\smd_147709
-    SFA-APP1.file should not exist  C:\\Sheetmusic\\MusicSales\\Working\\smd_147709
+    SFA-APP1.directory should not exist  C:\\Sheetmusic\\MusicSales\\Working\\smd_134342
+    SFA-APP1.file should not exist  C:\\Sheetmusic\\MusicSales\\Working\\smd_134342
 
 Check status update
     connect

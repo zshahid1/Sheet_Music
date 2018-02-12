@@ -6,7 +6,7 @@ Resource  ../Resources/DB/SQL_Server.robot
 Resource  ../Resources/Keywords.robot
 
 *** Variables ***
-${147709}  \\\\SFA-APP1\\Sheetmusic\\MusicSales\\Working\\smd_147709\\smd_147709_Mets.xml
+${147709}  \\\\SFA-APP1\\Sheetmusic\\MusicSales\\Working\\smd_134342\\smd_134342_Mets.xml
 ${Jhove Fail}   //SFA-APP1/Sheetmusic/MusicSales/Working/smd_148049/smd_148049_Mets.xml
 String  ${ValidationTrueFalse} =  "Not Well-Formed"
 

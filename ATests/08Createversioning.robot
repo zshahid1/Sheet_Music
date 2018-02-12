@@ -6,8 +6,8 @@ Resource  ../Resources/DB/SQL_Server.robot
 Resource  ../Resources/Keywords.robot
 
 *** Variables ***
-${Xml File}   //SFA-APP1/Sheetmusic/MusicSales/Working/smd_147709/smd_147709_Mets.xml
-${Xml File2}  //SFA-APP1/Sheetmusic/MusicSales/Working/smd_147778/smd_147778_Mets.xml
+${Xml File}   //SFA-APP1/Sheetmusic/MusicSales/Working/smd_134342/smd_134342_Mets.xml
+${Xml File2}  //SFA-APP1/Sheetmusic/MusicSales/Working/smd_134342/smd_134342_Mets.xml
 #${HASHVALUE}  55db5f1441acacf57a0e5705087347324b0b4f403000100921e036b36312a2ca
 *** Test Cases ***
 

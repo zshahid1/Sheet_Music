@@ -9,7 +9,7 @@ Resource  ../Resources/DB/SQL_Server.robot
 
 # 19028 - Ensure submission passes successfully through SI
 
-Check any errors - amend this
+Check if any errors
     check if not exists in database  SELECT * FROM [workflow].[dbo].[WorkflowEntityActivity] WHERE Status = 'ContentStreamUpdatedFailed'
 
 Check if Mer updated
